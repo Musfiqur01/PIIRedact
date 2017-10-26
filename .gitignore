@@ -1,0 +1,7 @@
+
+.vs/**
+packages/**
+PIIRedact/bin/**
+PIIRedact/obj/**
+PIIRedactTest/bin/**
+PIIRedactTest/obj/**
