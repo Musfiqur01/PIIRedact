@@ -150,11 +150,12 @@ namespace PIIRedact
                             {
                                 if (whitelistedRegion.isWithinRange(i))
                                 {
-                                ignore = true;
-                                continue;
+                                    ignore = true;
+                                    break;
                                 }
                             }
-                           if(!ignore) result[i] = this.FillerCharacter;
+
+                            if (!ignore) result[i] = this.FillerCharacter;
                         }
                     }
             });

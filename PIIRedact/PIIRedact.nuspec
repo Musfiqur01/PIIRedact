@@ -13,4 +13,7 @@
     <copyright>Copyright 2017</copyright>
     <tags>dlp PII Redact scrub</tags>
   </metadata>
+  <files>
+	<file src="english.all.3class.distsim.crf.ser.gz" target="build"/>
+  </files>
 </package>

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="PIIRedactorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityFinderTest.cs" />
     <Compile Include="RegexFinderTest.cs" />
   </ItemGroup>
   <ItemGroup>
