@@ -15,5 +15,6 @@
   </metadata>
   <files>
 	<file src="english.all.3class.distsim.crf.ser.gz" target="build"/>
+	<file src="PIIRedact.targets" target="build"/>
   </files>
 </package>
