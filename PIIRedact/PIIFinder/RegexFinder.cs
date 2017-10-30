@@ -36,11 +36,11 @@ namespace PIIRedact
         /// Returns the string after redacting the PII
         /// </summary>
         /// <param name="sensitiveInformation"></param>
-        /// <returns></returns>
-        public IEnumerable<IPIIMatchResult> LocatePIIData(string sensitiveInformation)
+        /// <returns>THe list of matches</returns>
+        public IEnumerable<IPatternMatchResult> LocatePIIData(string sensitiveInformation)
         {
             MatchCollection mc = Regex.Matches(sensitiveInformation, this.pattern);
-            var redactedResults = new List<IPIIMatchResult>();
+            var redactedResults = new List<IPatternMatchResult>();
             foreach (Match m in mc)
             {
                 redactedResults.Add(GetPatternMatchResult(m));

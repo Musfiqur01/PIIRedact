@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PIIRedact
 {
+    /// <summary>
+    /// This class represents the config that determines which redactors will be included in the PIIRedactor.
+    /// </summary>
     public class PIIRedactorConfig
     {
         /// <summary>

@@ -140,11 +140,11 @@
     <Compile Include="PIIRedactor.cs" />
     <Compile Include="IPIIRedactor.cs" />
     <Compile Include="PIIFinder\IPIIFinder.cs" />
-    <Compile Include="IPatternMatch.cs" />
+    <Compile Include="IPatternMatchResult.cs" />
     <Compile Include="PIIFinder\EntityFinder.cs" />
     <Compile Include="PIIRedactorConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RedactedResult.cs" />
+    <Compile Include="PatternMatchResult.cs" />
     <Compile Include="RegexLibrary.cs" />
     <Compile Include="PIIFinder\RegexFinder.cs" />
   </ItemGroup>

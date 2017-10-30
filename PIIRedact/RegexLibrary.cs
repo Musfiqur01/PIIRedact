@@ -1,5 +1,8 @@
 ﻿namespace PIIRedact
 {
+    /// <summary>
+    /// The library which contains the regex pattern for common PII items.
+    /// </summary>
     public static class RegexLibrary
     {
         /// <summary>

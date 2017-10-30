@@ -12,10 +12,19 @@ namespace PIIRedact
     /// </summary>
     public class RegexGroupFinder : RegexFinder
     {
+        /// <summary>
+        /// Creates a new instance of <see cref="RegexGroupFinder"/>
+        /// </summary>
+        /// <param name="pattern">The regex expression where the 2nd group will be redacted/whitelisted. i.e. (USD)(\d+). Here the digit after USD will be redacted or whitelisted.</param>
         public RegexGroupFinder(string pattern) : base(pattern)
         {
         }
 
+        /// <summary>
+        /// Returns the <see cref="PatternMatchResult"/> from the regex match
+        /// </summary>
+        /// <param name="m">Regex match</param>
+        /// <returns>The pattern match</returns>
         protected override PatternMatchResult GetPatternMatchResult(Match m)
         {
             return new PatternMatchResult(m.Groups[2].Index, m.Groups[2].Index + m.Groups[2].Length);

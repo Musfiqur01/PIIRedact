@@ -1,5 +1,8 @@
 ﻿namespace PIIRedact
 {
+    /// <summary>
+    /// Redacts sensistive information like PII. 
+    /// </summary>
     public interface IPIIRedactor
     {
         /// <summary>
@@ -10,14 +13,14 @@
         /// <summary>
         /// Adds a new redactor to the list of redactors.
         /// </summary>
-        /// <param name="redactor"></param>
+        /// <param name="redactor">The patter which will be redacted</param>
         void AddToRedactors(IPIIFinder redactor);
 
         /// <summary>
         /// Adds a pattern which will whitelist a expression
         /// </summary>
-        /// <param name="whitelist"></param>
-        void AddToWhiteList(IPatternFinder redactor);
+        /// <param name="whitelist">The pattern which will be whitelisted</param>
+        void AddToWhiteList(IPatternFinder whitelist);
 
         /// <summary>
         /// Loads the redactors and whitelists.

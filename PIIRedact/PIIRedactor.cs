@@ -121,8 +121,8 @@ namespace PIIRedact
         public string GetRedactedData(string senstiveData)
         {
             StringBuilder result = new StringBuilder(senstiveData);
-            var redactedResultSet = new ConcurrentBag<IPIIMatchResult>();
-            var whitelistedResultSet = new ConcurrentBag<IPIIMatchResult>();
+            var redactedResultSet = new ConcurrentBag<IPatternMatchResult>();
+            var whitelistedResultSet = new ConcurrentBag<IPatternMatchResult>();
             Parallel.ForEach(redactors, (redactor) => {
                 var redactedResults = redactor.LocatePIIData(senstiveData);
                 foreach(var redactedResult in redactedResults)
@@ -140,7 +140,7 @@ namespace PIIRedact
             });
 
             
-            Parallel.ForEach<IPIIMatchResult>(redactedResultSet.AsEnumerable(), (redactedResult) => {
+            Parallel.ForEach<IPatternMatchResult>(redactedResultSet.AsEnumerable(), (redactedResult) => {
                 for(int i=redactedResult.Start; i < redactedResult.End; i++)
                 {
                     if (!NonRedactableCharacters.Contains(result[i]))
