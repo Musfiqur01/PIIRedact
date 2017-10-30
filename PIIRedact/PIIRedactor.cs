@@ -56,7 +56,7 @@ namespace PIIRedact
         }
 
         /// <summary>
-        /// Adds a pattern which will whitelist a expression
+        /// Adds a pattern which will whitelist an expression
         /// </summary>
         /// <param name="whitelist"></param>
         public void AddToWhiteList(IPatternFinder whitelist)

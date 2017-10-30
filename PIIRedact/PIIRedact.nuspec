@@ -9,12 +9,15 @@
     <projectUrl>https://github.com/Musfiqur01/PIIRedact</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Release 1</releaseNotes>
+	<summary>Redacts the PII information. This package uses Stanford NER package to identify and scrub name, organization and location. It also redacts email,ssn,driver license,
+passport no and many other identifier. It aggressively removes any number with more than 4 consecutive digits. Use AddToWhitelist to whitelist any pattern.In order to use this package, you must have java installed.</summary>
+    <releaseNotes>Initial Release</releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>dlp PII Redact scrub</tags>
+    <tags>dlp PII redact scrub Personally Identifiable Information data leak prevention</tags>
   </metadata>
   <files>
 	<file src="english.all.3class.distsim.crf.ser.gz" target="build"/>
 	<file src="PIIRedact.targets" target="build"/>
+	<file src=".\bin\Release\PIIRedact.xml" target="lib"/>
   </files>
 </package>
