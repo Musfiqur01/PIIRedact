@@ -14,7 +14,7 @@ namespace PIIRedact
         /// <summary>
         /// The list of redactors
         /// </summary>
-        private List<IPIIFinder> redactors = new List<IPIIFinder>();
+        private List<IPatternFinder> redactors = new List<IPatternFinder>();
         
         /// <summary>
         /// The list of whitelist
@@ -50,7 +50,7 @@ namespace PIIRedact
         /// Adds a new redactor to the list of redactors.
         /// </summary>
         /// <param name="redactor"></param>
-        public void AddToRedactors(IPIIFinder redactor)
+        public void AddToRedactors(IPatternFinder redactor)
         {
             redactors.Add(redactor);
         }

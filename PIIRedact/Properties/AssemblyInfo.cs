@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PII Redactor")]
-[assembly: AssemblyDescription("Redacts the PII information i.e Name, organization, location,email, ssn, driver license, passport no.etc.")]
+[assembly: AssemblyDescription("Redacts the PII information i.e name, organization, location,email, ssn, driver license, passport no. ip address etc.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Musfiqur")]
+[assembly: AssemblyCompany("Musfiqur.Rahman")]
 [assembly: AssemblyProduct("PII Redactor")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]

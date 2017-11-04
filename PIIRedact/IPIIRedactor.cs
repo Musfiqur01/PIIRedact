@@ -14,7 +14,7 @@
         /// Adds a new redactor to the list of redactors.
         /// </summary>
         /// <param name="redactor">The patter which will be redacted</param>
-        void AddToRedactors(IPIIFinder redactor);
+        void AddToRedactors(IPatternFinder redactor);
 
         /// <summary>
         /// Adds a pattern which will whitelist a expression

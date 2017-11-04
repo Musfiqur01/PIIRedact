@@ -139,7 +139,6 @@
     <Compile Include="PIIFinder\RegexGroupFinder.cs" />
     <Compile Include="PIIRedactor.cs" />
     <Compile Include="IPIIRedactor.cs" />
-    <Compile Include="PIIFinder\IPIIFinder.cs" />
     <Compile Include="IPatternMatchResult.cs" />
     <Compile Include="PIIFinder\EntityFinder.cs" />
     <Compile Include="PIIRedactorConfig.cs" />

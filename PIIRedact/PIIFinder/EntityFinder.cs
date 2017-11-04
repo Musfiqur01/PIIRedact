@@ -12,7 +12,7 @@ namespace PIIRedact
     /// <summary>
     /// Identifies Entity like name, location and organization.
     /// </summary>
-    public class EntityFinder : IPIIFinder
+    public class EntityFinder : IPatternFinder
     {
         private CRFClassifier classifier;
         /// <summary>

@@ -13,3 +13,7 @@ the redacted string looks like : My name is xxxx xxx. My email is x@x.x
 If you want to whitelist any pattern i.e any number with 6-8 consecutive digits, should be done as follows:
 
 redactor.AddToWhitelist(new RegexFinder("\b\d{6,8}\b"));
+
+similarly to add a new redactable pattern will redact any word 6-8 consecutive digits. 
+redactor.AddToWhitelist(new RegexFinder("\b\d{6,8}\b"));
+

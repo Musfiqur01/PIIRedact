@@ -6,7 +6,7 @@ namespace PIIRedact
     /// <summary>
     /// A PII redactor based on Regular expression
     /// </summary>
-    public class RegexFinder : IPIIFinder
+    public class RegexFinder : IPatternFinder
     {
         /// <summary>
         /// The regular expression
