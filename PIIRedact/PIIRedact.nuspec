@@ -11,7 +11,7 @@
     <description>$description$</description>
 	<summary>Redacts the PII information. This package uses Stanford NER package to identify and scrub name, organization and location. It also redacts email,ssn,driver license,
 passport no and many other identifier. It aggressively removes any number with more than 4 consecutive digits. Use AddToWhitelist to whitelist any pattern.In order to use this package, you must have java installed.</summary>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>Added license information</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>dlp PII redact scrub Personally Identifiable Information data leak prevention</tags>
   </metadata>

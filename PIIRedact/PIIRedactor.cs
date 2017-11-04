@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PIIRedact
 {
     /// <summary>
-    /// Redacts sensistive information like PII. 
+    /// Redacts sensitive information like PII. 
     /// </summary>
     public class PIIRedactor : IPIIRedactor
     {

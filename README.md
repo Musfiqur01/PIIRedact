@@ -6,3 +6,10 @@ passport no. It aggressively removes any number with more than 4 consecutive dig
 The usage is:
 var redactor = new PIIRedactor();
 var redactedData = redactor.GetRedactedData("My name is John Doe. My email is m@n.o");
+
+the redacted string looks like : My name is xxxx xxx. My email is x@x.x
+
+
+If you want to whitelist any pattern i.e any number with 6-8 consecutive digits, should be done as follows:
+
+redactor.AddToWhitelist(new RegexFinder("\b\d{6,8}\b"));
