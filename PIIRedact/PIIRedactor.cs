@@ -24,15 +24,29 @@ namespace PIIRedact
         /// <summary>
         /// Creates a new instance of PIIRedactor
         /// </summary>
-        public PIIRedactor()
+        public PIIRedactor():this(System.AppDomain.CurrentDomain.BaseDirectory)
+        {            
+        }
+
+        /// <summary>
+        /// Creates a new instance of PIIRedactor
+        /// </summary>
+        /// <param name="path">The directory path of english.all.3class.distsim.crf.ser.gz</param>
+        public PIIRedactor(string path)
         {
             this.NonRedactableCharacters = new List<char> { '@', '-', '.', ',' };
             this.PIIRedactorConfig = new PIIRedactorConfig();
+            this.Path = path;
             this.Load();
         }
 
         /// <summary>
-        /// The config for PIIredactor.
+        /// Gets or sets the path of the content i.e english.all.3class.distsim.crf.ser.gz
+        /// </summary>
+        public string Path { get; }
+
+        /// <summary>
+        /// Gets or sets the config for PIIredactor.
         /// </summary>
         public PIIRedactorConfig PIIRedactorConfig { get; }
 
@@ -81,7 +95,7 @@ namespace PIIRedact
             }
             if (this.PIIRedactorConfig.IncludeEntityRedaction)
             {
-                redactors.Add(new EntityFinder());
+                redactors.Add(new EntityFinder(this.Path));
             }
             if (this.PIIRedactorConfig.IncludeIPAddress)
             {

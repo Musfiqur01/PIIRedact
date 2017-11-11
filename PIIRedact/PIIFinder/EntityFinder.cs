@@ -18,10 +18,22 @@ namespace PIIRedact
         /// <summary>
         /// Create a new instance of <see cref="EntityFinder"/> class.
         /// </summary>
-        public EntityFinder()
+        public EntityFinder():this(System.AppDomain.CurrentDomain.BaseDirectory)
         {
-            var path = System.AppDomain.CurrentDomain.BaseDirectory + @"\english.all.3class.distsim.crf.ser.gz";
-            classifier = CRFClassifier.getClassifierNoExceptions(path);
+        }
+
+        /// <summary>
+        /// Create a new instance of <see cref="EntityFinder"/> class.
+        /// </summary>
+        /// <param name="path">The directory path of english.all.3class.distsim.crf.ser.gz</param>
+        public EntityFinder(string path)
+        {
+            var classifierpath = path + @"\english.all.3class.distsim.crf.ser.gz";
+            if(!File.Exists(classifierpath)){
+                throw new FileNotFoundException($"english.all.3class.distsim.crf.ser.gz could not be found in the :{path}. Please set the appropriate directory address");
+            }
+
+            classifier = CRFClassifier.getClassifierNoExceptions(classifierpath);
         }
 
         /// <summary>

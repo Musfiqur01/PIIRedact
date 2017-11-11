@@ -12,7 +12,7 @@ namespace PIIRedact
     public class PIIRedactorConfig
     {
         /// <summary>
-        /// Determines if the regex forr email should be included in the PII config
+        /// Determines if the regex for email should be included in the PII config
         /// </summary>
         public bool IncludeEmail { get; set; } = true;
 
